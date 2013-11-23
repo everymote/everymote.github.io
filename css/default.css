@@ -1,0 +1,196 @@
+@charset "UTF-8";
+/* CSS Document */
+
+@import url(layout.css);
+@import url(color.css);
+@import url(box.css);
+
+body {
+    background: url("../images/bg.png") repeat-x scroll right top #E9E9E9;
+    color: #686868;
+    text-align: center;
+	font-family: Sans-Serif;
+	font-size:small;
+	height:100%;
+}
+
+
+
+* {
+margin: 0;
+padding: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+
+a:hover {
+	text-decoration: none;
+}
+
+img,
+a img {
+border:none;
+}
+
+
+h1 {
+	font-size:1.4em;
+	font-weight: bold;
+}
+
+h2 {
+	margin:10px 0 10px 0;
+	font-size:1.1em;
+	letter-spacing: 1px;
+	font-weight: bold;
+}
+
+h3 {
+	font-size:1.1em;
+	font-weight: bold;
+}
+
+h4 {
+	font-size:0.9em;
+	letter-spacing: 1px;
+	font-weight: bold;
+	margin:0 0 13px 0;
+}
+
+h5
+{
+	font-size:1.0em;
+	letter-spacing: 1px;
+	font-weight: bold;
+}
+
+p {
+padding:0 0 10px 0;
+display:block;
+}
+
+strong {
+display:block;
+padding-bottom:5px;
+}
+
+.myButtonLinkT {
+	display: block;
+	width: 100px;
+	height: 100px;
+	background: url('../images/twitter.png') bottom;
+	text-indent: -99999px;
+}
+.myButtonLinkT:hover {
+	background-position: 0 0;
+}
+.myButtonLinkF {
+	display: block;
+	width: 100px;
+	height: 100px;
+	background: url('../images/facebook.png') bottom;
+	text-indent: -99999px;
+}
+.myButtonLinkF:hover {
+	background-position: 0 0;
+}
+.myButtonLinkG {
+	display: block;
+	width: 100px;
+	height: 100px;
+	background: url('../images/google.png') bottom;
+	text-indent: -99999px;
+}
+.myButtonLinkG:hover {
+	background-position: 0 0;
+}
+
+#topBarFacebook{
+	border:0px solid black;
+	float:right;
+	position:absolute;
+	right:100px;
+	top:10px;
+	z-index:8000;
+}
+#topBarTwitter{
+	border:0px solid black;
+	position:absolute;
+	right:190px;
+	top:10px;
+	z-index:8000;
+}
+
+#topBarGooglePlus{
+	border:0px solid black;
+	position:absolute;
+	right:10px;
+	top:10px;
+	z-index:8000;
+}
+
+body {
+    background: url("../images/bg.png") repeat-x scroll right top #E9E9E9;
+    color: #686868;
+    text-align: center;
+	font-family: Sans-Serif;
+	font-size:small;
+	height:100%;
+}
+
+h1 {
+	font-size: 2em;
+}
+h2 {
+	font-size: 1.2em;
+}
+.section {
+color:#bbbbbb;
+border-bottom: thin solid #bbbbbb;
+margin:30px 0px 20px  0px;
+clear:both;
+} 
+
+img
+{
+	vertical-align:text-top;
+}
+
+
+.roundedBox{
+	border-radius:40px;
+	-moz-border-radius:40px;
+}
+
+
+/* Templates start hidden */
+.hidden {
+	display: none;
+}
+
+.content {
+  	position: relative;
+	width: 640px;		/*Determines the width of the entire page*/
+	margin: 0 auto;		/*Allows cetering of the page*/
+	text-align: left;   /*Allows cetering of the page*/
+	padding:20px;
+}
+
+#livingroom {
+	position: relative;
+	width: 640px;		/*Determines the width of the entire page*/
+	margin: 0 auto;		/*Allows cetering of the page*/
+	text-align: left;   /*Allows cetering of the page*/
+	padding:20px;
+}
+
+.livingroom_howto{
+	
+	margin-top:10px;
+	padding:10px;
+	background-color:#cccccc;
+}
+

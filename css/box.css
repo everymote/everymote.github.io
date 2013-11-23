@@ -1,0 +1,32 @@
+@charset "UTF-8";
+/* CSS Document */
+
+.myButton {
+	-moz-box-shadow:inset 0px 1px 0px 0px #f5b856;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #f5b856;
+	box-shadow:inset 0px 1px 0px 0px #f5b856;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #f9af26), color-stop(1, #e1600f) );
+	background:-moz-linear-gradient( center top, #f9af26 5%, #e1600f 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f9af26', endColorstr='#e1600f');
+	background-color:#f9af26;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:1px solid #946c30;
+	display:inline-block;
+	color:#ffffff;
+	font-family:arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #855c19;
+}.myButton:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #e1600f), color-stop(1, #f9af26) );
+	background:-moz-linear-gradient( center top, #e1600f 5%, #f9af26 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#e1600f', endColorstr='#f9af26');
+	background-color:#e1600f;
+}.myButton:active {
+	position:relative;
+	top:1px;
+}

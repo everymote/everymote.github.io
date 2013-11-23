@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>How to install Everymote on a Beaglebone</title>
+    <link href="css/default.css" rel="stylesheet" type="text/css" />
+    <meta property="fb:page_id" content="262469527149309" />
+    <meta itemprop="name" content="everymote">
+    <meta itemprop="description" content="a remote for the web of things">
+    <meta itemprop="image" content="www.everymote.com/images/everymote_profile.png">
+    <meta name="keywords" content="everymote,iot,internet of things,remote" >
+    <meta name="description" content="a remote for the web of things">
+    <script type="text/javascript">
+
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-28626573-1']);
+          _gaq.push(['_trackPageview']);
+
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+
+    </script>
+    </head>
+    <body>
+<div id="wrapper">
+      <div id="brand"> <a href="http://www.everymote.com"><img src="images/everymote.png" alt="everymote" /></a> </div>
+      <div id="social">
+    <div id="topBarGooglePlus">
+          <div class="g-plusone" data-size="medium" data-href="http://www.everymote.com/"> </div>
+        </div>
+    <div id="topBarFacebook">
+          <div id="fb-root"></div>
+          <div class="fb-like" data-href="https://www.facebook.com/everymote" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false"></div>
+        </div>
+    <div id="topBarTwitter"> <a href="http://www.everymote.com/" class="twitter-share-button" data-count="horizontal" data-lang="en" data-related="everymote" data-text="everymote the remote thats adjusts to where you are" data-url="http://www.everymote.com/" >Tweet</a> </div>
+  </div>
+      <div class="content">
+    <div class="section"><span>How to install </span></div>
+    <h1>Everymote on a Beaglebone</h1>
+    Everymote tellstick is no running on&nbsp;Beaglebone with &Auml;ngstr&ouml;m, it will&nbsp;probably&nbsp;work on other linux distribution too.<br>
+    <br>
+    <a href="http://2.bp.blogspot.com/-TAT9EaLP9aw/T-38cphV2DI/AAAAAAAABOQ/yj1gqbvZhhE/s1600/2012-06-29+11.12.49.jpg" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img alt="beaglebone with tellstick" src="http://2.bp.blogspot.com/-TAT9EaLP9aw/T-38cphV2DI/AAAAAAAABOQ/yj1gqbvZhhE/s400/2012-06-29+11.12.49.jpg" title="beaglebone with tellstick" height="298" border="0" width="400"></a></div>
+      <br>
+      <h3>Prerequisites</h3>
+      Nodejs version &gt;= 0.6.15<br>
+      telldus-core version 2.1.1 <a href="https://github.com/evilmachina/telldus-core-js/wiki/Installing-telldus-core-on-BeagleBone" target="_blank">how to install</a><br>
+      <br>
+      <h3>Install&nbsp; everymote-tellstick</h3>
+      <pre class="code"><code>npm install everymote-tellstick -g</code></pre>
+      <br>
+      <span style="background-color: white;">If it&nbsp;successfully&nbsp;installed&nbsp;you can now start it by running</span><br>
+      <br>
+      <pre class="code"><code>everymote-tellstick</code></pre>
+      <br>
+      or cloning the git <a href="https://github.com/evilmachina/everymote-tellstick" target="_blank">repo</a> and start it by using<br>
+      <br>
+      <pre class="code"><code>node app.js</code></pre>
+      <br>
+      <h3>Auto start</h3>
+      <div> Her is a example on how you can get everymote-tellstick start automaticly at startup by creating a cron job. Start by create starteverymote.sh</div>
+      <br>
+      <pre class="code"><code>#!/bin/sh
+
+sleep 60
+echo "started"
+/usr/local/sbin/telldusd
+echo "telldusd started"
+/usr/bin/everymote-tellstick</code>
+</pre>
+      <br>
+      To register the script as a cron job run<br>
+      <br>
+      <pre class="code"><code>crontab -e</code>
+</pre>
+      <br>
+      and add the&nbsp;flowing&nbsp;last<br>
+      <br>
+      <pre class="code"><code>@reboot sh /dir/to/starteverymote.sh &gt;/dir/to/log/cronout.log</code></pre>
+      <br>
+      Reboot and it should register all devices to everymote.&nbsp; Go to <a href="http://m.everymote.com/">m.everymote.com</a> and control your devices.<br>
+      <br>
+      Everymote &nbsp;is still in&nbsp;early&nbsp;development and we suport on, off and dim at the moment. </div>
+</div>
+<script type="text/javascript">
+      (function() {
+        var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+        po.src = 'https://apis.google.com/js/plusone.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+      })();
+    </script> 
+<script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script> 
+<script>
+!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+</script>
+</div>
+</body>
+</html>
